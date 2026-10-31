@@ -1,0 +1,467 @@
+/* Este é o arquivo de estilos CSS para o site da Rapha Sound */
+
+/* Estilos Globais e do Corpo da Página */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    line-height: 1.6;
+    background-image: url("imagens/Plano de Fundo 2.jpg"); /* URL da imagem de fundo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-attachment: fixed;
+}
+
+/* Estilos para o Cabeçalho Principal (fixo e com borda amarela) */
+header {
+    background-color: #000;
+    color: #FFD700;
+    padding: 15px 0; /* Padding vertical do cabeçalho */
+    border-bottom: 3px solid #FFD700; /* Linha amarela na parte inferior */
+    position: sticky; /* Torna o cabeçalho fixo ao rolar */
+    top: 0; /* Fixa no topo da tela */
+    width: 100%;
+    z-index: 100; /* Garante que fique acima de outros elementos */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    
+    display: flex; /* Ativa Flexbox para o header */
+    flex-direction: column; /* Empilha os itens verticalmente */
+    align-items: center; /* Centraliza os itens horizontalmente */
+}
+
+/* Estilos para o contêiner interno do cabeçalho (logo + h1) */
+.header-content {
+    display: flex; /* Ativa Flexbox para alinhar logo e título */
+    align-items: center; /* Centraliza verticalmente o logo e o título */
+    justify-content: center; /* Centraliza o logo e o título juntos */
+    max-width: 1200px; /* Limita a largura máxima do conteúdo do cabeçalho */
+    width: 100%; /* Garante que ele ocupe a largura total disponível */
+    padding: 0 20px; /* Espaçamento interno nas laterais */
+    margin-bottom: 10px; /* Espaço abaixo do logo/título antes da navegação */
+}
+
+/* Estilos para o link do logo (torna o logo clicável) */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: #FFD700; /* Cor do texto, caso a imagem do logo não carregue */
+}
+
+/* Estilos para a imagem do logo */
+.header-content img {
+    height: 90px; /* Aumenta a altura do logo */
+    width: auto; /* Mantém a proporção */
+    border-radius: 5px;
+    margin-right: 20px; /* Espaço entre o logo e o h1 */
+}
+
+/* Estilos para o Título H1 dentro do Cabeçalho */
+header h1 {
+    color: #FFD700;
+    font-size: 48px; /* Tamanho da fonte do h1 para harmonizar com o logo */
+    padding: 0;
+    margin: 0; /* Remove margens padrão do h1 */
+    background-color: transparent;
+    white-space: nowrap; /* Impede quebra de linha em telas pequenas */
+    text-align: left; /* Alinha à esquerda em relação ao seu próprio contêiner flex */
+}
+
+/* Estilos para a Navegação Principal */
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Centraliza os links de navegação */
+    flex-wrap: wrap; /* Para garantir que os links quebrem linha em telas pequenas */
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px; /* Espaçamento entre os itens de navegação */
+}
+
+nav ul li a {
+    color: #FFD700;
+    text-decoration: none;
+    padding: 8px 15px; /* Padding mais adequado para links de navegação */
+    display: inline-block;
+    font-size: 18px; /* Tamanho da fonte dos links de navegação */
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    color: #fff; /* Muda para branco ao passar o mouse */
+}
+
+/* Estilos para o Conteúdo Principal (main) */
+main {
+    max-width: 960px; /* Limita a largura do conteúdo principal */
+    margin: 20px auto; /* Centraliza o conteúdo principal */
+    padding: 0 20px; /* Espaçamento lateral do conteúdo principal */
+}
+
+/* Estilos para as Seções de Conteúdo */
+section {
+    background-color: rgba(255, 255, 255, 0.97); /* Fundo branco com leve transparência */
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+/* Estilos para os Títulos de Seção (h2) */
+section h2 {
+    color: #000;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estilos para Parágrafos */
+section p {
+    text-align: justify;
+    margin-bottom: 10px;
+}
+
+/* Estilos para Listas de Serviços */
+section ul {
+    list-style: none;
+    padding: 0;
+}
+
+section ul li {
+    background-color: #f9f9f9;
+    margin-bottom: 8px;
+    padding: 10px;
+    border-left: 5px solid #FFD700;
+    border-radius: 4px;
+}
+
+/* Estilos para Imagens na Galeria (regra genérica, pode ser sobrescrita por .gallery-grid figure img) */
+section img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Estilos para Legendas de Figuras */
+figcaption {
+    text-align: center;
+    font-style: italic;
+    color: #666;
+    margin-top: 5px;
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+/* Estilos para Depoimentos */
+blockquote {
+    background-color: #f9f9f9;
+    border-left: 5px solid #FFD700;
+    padding: 15px 20px;
+    margin: 20px 0;
+    border-radius: 8px;
+    font-style: italic;
+    color: #555;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.08);
+}
+
+blockquote p {
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+/* Estilos para o Autor do Depoimento */
+blockquote footer {
+    text-align: right;
+    font-style: normal;
+    color: #000;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: transparent;
+    padding: 0;
+}
+
+/* Estilos para o Iframe do Mapa */
+section iframe {
+    max-width: 100%;
+    height: 400px;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
+}
+
+/* Estilos para o Botão Principal (WhatsApp) */
+.call-to-action {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.button {
+    display: inline-block;
+    background-color: #000;
+    color: #FFD700;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #FFD700;
+    color: #000;
+    cursor: pointer;
+}
+
+/* Estilos para a Seção de Destaques de Serviços (Home) */
+.service-highlights {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.service-highlights article {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    flex: 1 1 calc(33% - 20px);
+    max-width: calc(33% - 20px);
+    text-align: center;
+}
+
+.service-highlights article h3 {
+    color: #000;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+/* Estilos para o Botão Pequeno */
+.button-small {
+    display: inline-block;
+    background-color: #FFD700;
+    color: #000;
+    padding: 8px 15px;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-small:hover {
+    background-color: #000;
+    color: #FFD700;
+}
+
+/* Estilos para a Seção "Por que Escolher a Rapha Sound?" (Home) */
+.why-choose-us ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.why-choose-us li {
+    background-color: #f9f9f9;
+    padding: 12px 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #FFD700;
+    border-radius: 4px;
+    font-size: 17px;
+    color: #333;
+}
+
+/* Estilos para o Rodapé */
+footer {
+    background-color: #000;
+    color: #FFD700;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* Estilos para Links no Rodapé (Instagram) */
+footer p a {
+    color: #FFD700;
+    text-decoration: none;
+    font-weight: bold;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+footer p a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* Estilos para o Botão "Voltar ao Topo" */
+#scrollToTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: #000;
+    color: #FFD700;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 18px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#scrollToTopBtn:hover {
+    background-color: #FFD700;
+    color: #000;
+}
+
+/* Estilos para o Contêiner da Galeria (Flexbox) */
+.gallery-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+/* Estilos para cada Item da Galeria (Figure) */
+.gallery-grid figure {
+    flex: 1 1 calc(50% - 10px);
+    max-width: calc(50% - 10px);
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+    margin: 0;
+}
+
+/* Ajusta as imagens dentro da figura para serem responsivas e padronizadas */
+.gallery-grid figure img {
+    max-width: 100%;
+    height: 250px; /* Altura padrão para as imagens da galeria */
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 992px) {
+    .service-highlights article {
+        flex: 1 1 calc(50% - 20px);
+        max-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    /* Ajustes para o cabeçalho em telas menores */
+    header {
+        padding: 10px 0; /* Diminui o padding do cabeçalho em mobile */
+    }
+    .header-content {
+        flex-direction: column; /* Empilha logo e h1 verticalmente */
+        margin-bottom: 5px; /* Menos espaço abaixo do logo/h1 */
+    }
+    .header-content img {
+        height: 70px; /* Ajusta o tamanho do logo em mobile */
+        margin-right: 0; /* Remove a margem à direita do logo */
+        margin-bottom: 5px; /* Espaço abaixo do logo */
+    }
+    header h1 {
+        font-size: 36px; /* Ajusta o tamanho do h1 em mobile */
+        margin-left: 0; /* Remove a margem à esquerda do h1 */
+    }
+    nav ul {
+        flex-direction: column; /* Empilha os itens da navegação */
+        padding: 5px 0;
+    }
+    nav ul li {
+        margin: 3px 0;
+    }
+    nav ul li a {
+        padding: 5px 10px;
+        font-size: 16px;
+    }
+
+    /* Outros ajustes de responsividade para o conteúdo */
+    .gallery-grid figure {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+    .service-highlights article {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+}
+/* Estiliza o contêiner do formulário */
+.contact-form-container {
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 30px; /* Espaço abaixo do formulário */
+    opacity: 0.9; /* Nível de transparência para o formulário */
+}
+
+.contact-form-container h3 {
+    color: #000;
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Estiliza cada grupo de formulário (label + input/textarea) */
+.form-group {
+    margin-bottom: 15px; /* Espaço entre os grupos */
+}
+
+.form-group label {
+    display: block; /* Faz o rótulo ocupar sua própria linha */
+    margin-bottom: 8px; /* Espaço entre o rótulo e o campo */
+    font-weight: bold; /* Texto do rótulo em negrito */
+    color: #333;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="tel"],
+.form-group textarea {
+    width: calc(100% - 20px); /* Ocupa quase 100% da largura do pai, ajustando para o padding */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
+}
+
+.form-group textarea {
+    resize: vertical; /* Permite redimensionar a caixa de texto apenas verticalmente */
+}
+
+/* Estiliza o botão de envio do formulário (reutiliza a classe .button existente) */
+.contact-form-container .button {
+    width: 100%; /* Faz o botão ocupar 100% da largura do contêiner */
+    margin-top: 20px; /* Espaço acima do botão */
+}
