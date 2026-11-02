@@ -10,6 +10,7 @@ O objetivo do site é fortalecer a presença digital da Rapha Sound, divulgando 
 
 - 🔶 HTML5
 - 🎨 CSS3
+- ⚡ JavaScript
 
 ## 🎯 Objetivos do Projeto
 
